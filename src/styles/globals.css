@@ -22,6 +22,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   color: white;
   margin: 20px 0 40px;
 }
@@ -324,6 +325,11 @@ h4 {
 
 
 @media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
   .card {
     flex-direction: column;
   }
