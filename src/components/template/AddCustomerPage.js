@@ -41,7 +41,6 @@ function AddCustomerPage() {
       date: "",
       products: [],
     });
-    toast.warning("Forms is empty");
     router.push("/");
   };
 
