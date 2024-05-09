@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   if (req.method === "POST") {
     const data = req.body.data;
-    console.log(data);
+
 
     if (!data.name || !data.lastName || !data.email) {
       return res
@@ -31,7 +31,6 @@ export default async function handler(req, res) {
       });
 
     } catch (error) {
-      console.log(error);
       res
         .status(500)
         .json({ status: "feild", message: "error in storing in DB!" });

@@ -5,6 +5,7 @@ function Layout({ children }) {
     <>
       <header className="header">
         <h2>Z CRM</h2>
+        <p>Please turn on your VPN</p>
         <Link href="/add-customer">Add Customer</Link>
       </header>
       <div className="main">{children}</div>

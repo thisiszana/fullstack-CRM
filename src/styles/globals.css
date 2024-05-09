@@ -26,6 +26,13 @@ a {
   margin: 20px 0 40px;
 }
 
+.header p {
+  border: 1px solid #8af1aa;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .main {
   min-height: 85vh;
 }
@@ -64,12 +71,25 @@ a {
 .card__details {
   display: flex;
 }
+.customer-detail__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .card__details p {
   margin-right: 30px;
 }
 
+.card__buttons  {
+  display: flex;
+  align-items: center;
+}
+
+
 .card__buttons button {
+  width: 50px;
+  height: 35px;
   border: 1px solid #f0394b;
   color: #f0394b;
   background-color: #262836;
@@ -79,7 +99,11 @@ a {
   cursor: pointer;
 }
 
+.customer-detail__title a,
 .card__buttons a {
+  width: 60px;
+  height: 35px;
+  text-align: center;
   border: 1px solid #8af1aa;
   color: #8af1aa;
   background-color: #262836;
@@ -257,6 +281,33 @@ h4 {
   width: 100px;
   text-align: center;
 }
+
+.loader-button__box {
+  width: 25px;
+  text-align: center;
+  margin: 0 auto;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #ffffff 90%, #ffffff00);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
 
 @media (max-width: 600px) {
   .card {
