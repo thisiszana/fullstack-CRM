@@ -77,6 +77,20 @@ a {
   justify-content: space-between;
 }
 
+
+.customer-detail__title a {
+  width: fit-content;
+  text-align: center;
+  border: 1px solid #8af1aa;
+  color: #8af1aa;
+  background-color: #262836;
+  padding: 5px;
+  margin-left: 15px;
+  border-radius: 5px;
+  font-weight: 200;
+}
+
+
 .card__details p {
   margin-right: 30px;
 }
@@ -99,7 +113,7 @@ a {
   cursor: pointer;
 }
 
-.customer-detail__title a,
+
 .card__buttons a {
   width: 60px;
   height: 35px;

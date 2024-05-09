@@ -20,10 +20,11 @@ function CustomerDetailsPage({ data }) {
       toast.error(json.message);
     }
   };
+
   return (
     <div className="customer-detail">
       <div className="customer-detail__title">
-        <h4>Customer's Details</h4>
+        <h4>Customer Details</h4>
         <Link href="/">Back Home</Link>
       </div>
       <div className="customer-detail__main">
