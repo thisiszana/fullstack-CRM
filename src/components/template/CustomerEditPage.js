@@ -3,6 +3,7 @@ import Form from "../module/Form";
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
 import moment from "moment";
+import Link from "next/link";
 
 function CustomerEditPage({ data: { data }, id }) {
   const date = data.date ? moment(data.date).utc().format("YYYY-MM-DD") : "";
@@ -42,7 +43,10 @@ function CustomerEditPage({ data: { data }, id }) {
   return (
     <div className="customer-page">
       <Toaster position="top-center" reverseOrder={false} />
-      <h4>Edit Customer</h4>
+      <div className="customer-detail__title">
+        <h4>Edit Customer</h4>
+        <Link href="/">Back Home</Link>
+      </div>
       <Form form={form} setForm={setForm} />
       <div className="customer-page__buttons">
         <button className="first" onClick={cancelHandler}>

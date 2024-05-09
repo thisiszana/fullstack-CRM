@@ -3,6 +3,7 @@ import Form from "../module/Form";
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
 import LoaderButton from "../module/LoaderButton";
+import Link from "next/link";
 
 function AddCustomerPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +21,7 @@ function AddCustomerPage() {
   const router = useRouter();
 
   const saveHandler = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
     const res = await fetch("/api/customer", {
       method: "POST",
       body: JSON.stringify({ data: form }),
@@ -30,7 +31,7 @@ function AddCustomerPage() {
 
     if (data.status === "Success") {
       toast.success("Data Successfully Create!");
-      setIsLoading(false)
+      setIsLoading(false);
       router.push("/");
     } else {
       toast.error(data.message);
@@ -52,7 +53,10 @@ function AddCustomerPage() {
   return (
     <div className="customer-page">
       <Toaster position="top-center" reverseOrder={false} />
-      <h4>Add New Customer</h4>
+      <div className="customer-detail__title">
+        <h4>Add New Customer</h4>
+        <Link href="/">Back Home</Link>
+      </div>
       <Form form={form} setForm={setForm} />
       <div className="customer-page__buttons">
         <button className="first" onClick={cancelHandler}>
